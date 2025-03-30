@@ -1,3 +1,29 @@
+Cách cài đặt trên visual studio 2022:
+1.	Tạo một project c++ dạng console
+2.	. Cấu hình project game và thư viện SDL2.0
+3.	Copy thư viện SDL2.0 tại đường dẫn sau đây => Dowload SDL 2.0 Lib
+4.	Sau khi download và giải nén, các bạn được một folder, copy folder đó vào project tại vị trí như sau
+5.	Các bạn sẽ thấy folder LibSdl2 sẽ nằm cùng với file GameCpp2.sln
+6.	a. Thiết lập đường dẫn include và đường dẫn lib file.
+7.	Các bạn sử dụng 4 path sau đây để trỏ project game đến các folder chưa file header của thư viện SDL
+8.	$(SolutionDir)LibSdl2\SDL2_ttf-2.0.14\include
+        $(SolutionDir)LibSdl2\SDL2_mixer-2.0.2\include
+        $(SolutionDir)LibSdl2\SDL2_image-2.0.3\include
+        $(SolutionDir)LibSdl2\SDL2-2.0.8\include
+9.	Chọn project, bấm chuột phải chọn properties để show bảng property pages, chọn VC++ Directies, chọn Include Directories.
+10.	Chọn vào button add màu vàng => sau đó paste lần lượt các đường dẫn ở trên vào.
+11.	Các bạn cũng copy lần lượt 4 đường dẫn sau đây cho folder lib
+12.	$(SolutionDir)LibSdl2\SDL2-2.0.8\lib\x86
+        $(SolutionDir)LibSdl2\SDL2_mixer-2.0.2\lib\x86
+        $(SolutionDir)LibSdl2\SDL2_image-2.0.3\lib\x86
+        $(SolutionDir)LibSdl2\SDL2_ttf-2.0.14\lib\x86
+13.	Tiếp theo các bạn vào linker, chọn phần input, và chọn mục Additional Dependencies, để add tên các file lib dưới đây
+14.	SDL2.lib
+	SDL2main.lib
+	SDL2_image.lib
+	SDL2_mixer.lib
+	SDL2_ttf.lib
+
 
 Lối chơi, logic của game:
 Link game youtube: https://www.youtube.com/watch?v=trh_7l8rVI4
