@@ -1,4 +1,4 @@
-﻿
+
 
 #include "stdafx.h"
 #include "HeartItem.h"
@@ -24,6 +24,7 @@ Mix_Chunk* g_sound_ex_main = NULL;
 Mix_Chunk* g_sound_explosion = NULL;
 Mix_Chunk* g_sound_background = NULL;
 TTF_Font*g_front_menu = NULL;
+Mix_Chunk* g_sound_player_jump = NULL;
 
 
 void ShowVictoryScreen(SDL_Renderer* g_screen)
@@ -141,10 +142,9 @@ bool ShowMenu(SDL_Renderer* g_screen)
     }
 }
 
-Mix_Chunk* g_sound_bullet = NULL;        // Âm thanh khi b?n ??n
-Mix_Chunk* g_sound_player_jump = NULL;   // Âm thanh khi nh?y
-Mix_Chunk* g_sound_player_coin = NULL;   // Âm thanh khi nh?t ti?n
-Mix_Chunk* g_sound_bullet_impact = NULL; // Âm thanh khi ??n va ch?m
+Mix_Chunk* g_sound_bullet = NULL;        
+Mix_Chunk* g_sound_player_coin = NULL;   
+Mix_Chunk* g_sound_bullet_impact = NULL; 
 
 bool InitData()
 {
@@ -155,7 +155,7 @@ bool InitData()
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
 
     //Create window
-    g_window = SDL_CreateWindow("SDL 2.0 Game Demo - Phat Trien Phan Mem 123AZ",
+    g_window = SDL_CreateWindow("SDL 2.0 Game Demo",
         SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if (g_window == NULL)
@@ -204,7 +204,7 @@ bool InitData()
             !g_sound_bullet_impact)
         {
             printf("Failed to load sound effects! SDL_mixer Error: %s\n", Mix_GetError());
-            // Ch? in thông báo, không c?n return false vì game v?n có th? ch?y
+    
         }
 
         g_font_text = TTF_OpenFont("font//dlxfont.ttf", 15);
@@ -426,9 +426,9 @@ int main(int argc, char* argv[])
             return 0;
         }
 
-        // Phát nh?c n?n sau khi ng??i ch?i b?t ??u game
+      
 #ifdef USE_AUDIO
-        Mix_PlayChannel(-1, g_sound_background, -1); // -1 là l?p vô h?n
+        Mix_PlayChannel(-1, g_sound_background, -1); // -1 là lặp vô hạn
 #endif
 
         if (!LoadBackground())
@@ -475,8 +475,8 @@ int main(int argc, char* argv[])
             }
 
             // ??t item c?c máu ? các v? trí khác nhau trên b?n ??
-            heart_item->set_x_pos(1000 + i * 1500);  // ?i?u ch?nh v? trí theo b?n ??
-            heart_item->set_y_pos(200);              // ?i?u ch?nh ?? cao
+            heart_item->set_x_pos(1000 + i * 1500);  // Điều chỉnh vị trí theo bạn ??
+            heart_item->set_y_pos(200);              // Điều chỉnh độ cao
             heart_items.push_back(heart_item);
         }
 
@@ -510,9 +510,9 @@ int main(int argc, char* argv[])
 
         int num_die = 0;
         unsigned int mark_value = 0;
-        int time_after_boss = 200; // Th?i gian sau khi tiêu di?t boss
-        bool boss_appeared = false; // Bi?n theo dõi tr?ng thái xu?t hi?n c?a boss
-        int old_money_val = 0; // Bi?n ?? theo dõi thay ??i ti?n
+        int time_after_boss = 200; // Thời gian sau khi tiêu diệt boss
+        bool boss_appeared = false; //  theo dõi trạng thái xuất hiện của boss
+        int old_money_val = 0;
 
         bool quit = false;
         bool restart_to_menu = false;
@@ -561,7 +561,7 @@ int main(int argc, char* argv[])
             player_power.Show(g_screen);
             player_money.Show(g_screen);
 
-            // Hi?n th? và ki?m tra va ch?m v?i item c?c máu
+            // Hiện thị và kiểm tra va chạm với item cục máu
             for (int i = 0; i < heart_items.size(); i++)
             {
                 HeartItem* heart_item = heart_items.at(i);
@@ -570,25 +570,25 @@ int main(int argc, char* argv[])
                     heart_item->SetMapXY(ga_map.start_x_, ga_map.start_y_);
                     heart_item->Show(g_screen);
 
-                    // Ki?m tra va ch?m v?i player
+                    // Kiểm tra va chạm với player
                     SDL_Rect rect_player = p_player.GetRectFrame();
                     SDL_Rect rect_item = heart_item->GetRect();
 
                     bool is_col = SDLCommonFunc::CheckCollision(rect_player, rect_item);
                     if (is_col)
                     {
-                        // Ng??i ch?i ?ã ?n ???c item c?c máu
+                   
                         heart_item->setCollected(true);
 
-                        // T?ng m?ng cho ng??i ch?i
+                        // Tăng mạng cho người chơi
                         player_power.InCrease();
 
-                        // Gi?m s? l?n ch?t (?? cân b?ng v?i h? th?ng m?ng hi?n t?i)
+                        // Giảm số lần chết 
                         if (num_die > 0) {
                             num_die--;
                         }
 
-                        // Phát âm thanh khi nh?t ???c c?c máu
+         
 #ifdef USE_AUDIO
                         Mix_PlayChannel(-1, g_sound_player_coin, 0);
 #endif
@@ -598,7 +598,7 @@ int main(int argc, char* argv[])
                 }
             }
 
-            // X? lý threats
+            // Xử lý threats
             for (int i = 0; i < threats_list.size(); i++)
             {
                 ThreatsObject* obj_threat = threats_list.at(i);
@@ -610,7 +610,7 @@ int main(int argc, char* argv[])
                     obj_threat->MakeBullet(g_screen, SCREEN_WIDTH, SCREEN_HEIGHT);
                     obj_threat->Show(g_screen);
 
-                    // X? lý va ch?m ??n c?a threat v?i player
+                    // Xử lý va chạm đann của threat với player
                     SDL_Rect rect_player = p_player.GetRectFrame();
                     bool is_col1 = false;
                     std::vector<BulletObject*> bullet_list = obj_threat->get_bullet_list();
@@ -846,7 +846,7 @@ int main(int argc, char* argv[])
             money_count.loadFromRenderedText(g_font_text, g_screen);
             money_count.RenderText(g_screen, SCREEN_WIDTH * 0.5 - 250, 15);
 
-            // X? lý boss xu?t hi?n
+            // Xử lý boss xuất hiện
             int val = MAX_MAP_X * TILE_SIZE - (ga_map.start_x_ + p_player.GetRect().x);
             if (val <= SCREEN_WIDTH)
             {
@@ -1000,7 +1000,7 @@ int main(int argc, char* argv[])
         }
         threats_list.clear();
 
-        // Gi?i phóng b? nh? c?a các item c?c máu
+        // Giải phóng bộ nhớ của các item cục máu
         for (int i = 0; i < heart_items.size(); i++)
         {
             HeartItem* heart_item = heart_items.at(i);
