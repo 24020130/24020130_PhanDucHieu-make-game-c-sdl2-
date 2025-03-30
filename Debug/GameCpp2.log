@@ -1,0 +1,108 @@
+﻿  main.cpp
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\CommonFunc.h(65,16): warning C4091: 'typedef ': ignored on left of 'GeometricFormat' when no variable is declared
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\CommonFunc.h(75,16): warning C4091: 'typedef ': ignored on left of 'ColorData' when no variable is declared
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\ThreatsObject.h(17,9): warning C4005: 'PLAYER_SPEED': macro redefinition
+  (compiling source file '/main.cpp')
+      C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\MainObject.h(13,9):
+      see previous definition of 'PLAYER_SPEED'
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\ThreatsObject.h(30,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\ThreatsObject.h(31,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\ThreatsObject.h(33,43): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\ThreatsObject.h(34,43): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\ThreatsObject.h(35,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\ThreatsObject.h(36,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\BossObject.h(12,9): warning C4005: 'PLAYER_HIGHT_VAL': macro redefinition
+  (compiling source file '/main.cpp')
+      C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\MainObject.h(14,9):
+      see previous definition of 'PLAYER_HIGHT_VAL'
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(453,48): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(461,22): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(462,29): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(478,40): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(565,31): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(602,31): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(617,41): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(646,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(647,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(688,33): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(694,39): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(711,47): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(712,47): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(749,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(750,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(821,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(847,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(877,37): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(889,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(890,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(935,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(936,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(992,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+C:\Users\Lenovo LOQ\source\repos\GameCpp2\GameCpp2\main.cpp(1004,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/main.cpp')
+  
+  GameCpp2.vcxproj -> C:\Users\Lenovo LOQ\source\repos\GameCpp2\Debug\GameCpp2.exe
